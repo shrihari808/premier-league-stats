@@ -2,11 +2,12 @@ package com.pl.premierstats.player;
 
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
+import org.springframework.data.domain.Pageable;
+
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Component
 public class PlayerService {
@@ -17,36 +18,28 @@ public class PlayerService {
         this.playerRepository = playerRepository;
     }
 
-    public List<Player> getPlayers(){
-        return playerRepository.findAll();
+    public Page<Player> getPlayers(Pageable pageable){
+        return playerRepository.findAll(pageable);
     }
 
-    public List<Player> getPlayersFromTeam(String teamName){
-        return playerRepository.findAll().stream().filter(player -> teamName.equals(player.getTeam())).collect(Collectors.toList());
+    public Page<Player> getPlayersFromTeam(String team, Pageable pageable){
+        return playerRepository.findByTeam(team, pageable);
     }
 
-    public List<Player> getPlayersByName(String searchText){
-        return playerRepository.findAll().stream()
-                .filter(player -> player.getName().toLowerCase().contains(searchText.toLowerCase()))
-                .collect(Collectors.toList());
+    public Page<Player> getPlayersByName(String name, Pageable pageable){
+        return playerRepository.findByNameContainingIgnoreCase(name, pageable);
     }
 
-    public List<Player> getPlayersByPos(String searchText){
-        return playerRepository.findAll().stream()
-                .filter(player -> player.getPos().toLowerCase().contains(searchText.toLowerCase()))
-                .collect(Collectors.toUnmodifiableList());
+    public Page<Player> getPlayersByPos(String pos, Pageable pageable){
+        return playerRepository.findByPosContainingIgnoreCase(pos, pageable);
     }
 
-    public List<Player> getPlayersByNation(String searchText){
-        return playerRepository.findAll().stream()
-                .filter(player -> player.getNation().toLowerCase().contains(searchText.toLowerCase()))
-                .collect(Collectors.toUnmodifiableList());
+    public Page<Player> getPlayersByNation(String nation, Pageable pageable){
+        return playerRepository.findByNationContainingIgnoreCase(nation, pageable);
     }
 
-    public List<Player> getPlayersByTeamAndPosition(String team, String position){
-        return playerRepository.findAll().stream()
-                .filter(player -> team.equals(player.getTeam()) && position.equals(player.getPos()))
-                .collect(Collectors.toUnmodifiableList());
+    public Page<Player> getPlayersByTeamAndPosition(String team, String pos, Pageable pageable){
+        return playerRepository.findByTeamAndPos(team, pos, pageable);
     }
 
     public Player addPlayer(Player player){

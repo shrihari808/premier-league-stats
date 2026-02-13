@@ -1,11 +1,11 @@
 package com.pl.premierstats.player;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/v1/player")
@@ -18,24 +18,24 @@ public class PlayerController {
     }
 
     @GetMapping
-    public List<Player> getPlayers(
+    public Page<Player> getPlayers(
             @RequestParam(required = false) String team,
             @RequestParam(required = false) String name,
             @RequestParam(required = false) String position,
-            @RequestParam(required = false) String nation){
+            @RequestParam(required = false) String nation, Pageable pageable){
         if (team != null && position!=null){
-            return playerService.getPlayersByTeamAndPosition(team, position);
+            return playerService.getPlayersByTeamAndPosition(team, position, pageable);
         }
         else if (team!=null){
-            return playerService.getPlayersFromTeam(team);
+            return playerService.getPlayersFromTeam(team, pageable);
         } else if (name!=null) {
-            return playerService.getPlayersByName(name);
+            return playerService.getPlayersByName(name, pageable);
         } else if (position!=null) {
-            return playerService.getPlayersByPos(position);
+            return playerService.getPlayersByPos(position, pageable);
         } else if (nation!=null) {
-            return playerService.getPlayersByNation(nation);
+            return playerService.getPlayersByNation(nation, pageable);
         } else {
-            return playerService.getPlayers();
+            return playerService.getPlayers(pageable);
         }
     }
 
