@@ -62,8 +62,8 @@ The backend exposes a RESTful API at `/api/v1/player` with pagination, dynamic s
   * `sort`: Sorting field and direction (e.g. `gls,desc`, `ast,desc`, `min,desc`)
 
 ### Interactive API Documentation:
-* **Swagger UI:** `/swagger-ui.html`
-* **OpenAPI Specification JSON:** `/v3/api-docs`
+* **Interactive Swagger Playground:** [https://premstats-api.onrender.com/swagger-ui.html](https://premstats-api.onrender.com/swagger-ui.html)
+* **OpenAPI 3.0 Specification JSON:** [https://premstats-api.onrender.com/v3/api-docs](https://premstats-api.onrender.com/v3/api-docs)
 
 ---
 
