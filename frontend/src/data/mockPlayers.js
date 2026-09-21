@@ -1,0 +1,28 @@
+// Comprehensive mock dataset of Premier League players for fallback / instant offline demo
+export const MOCK_PLAYERS = [
+  { name: "Erling Haaland", nation: "NOR", pos: "FW", age: 22, mp: 13, starts: 12, min: 1037.0, gls: 18.0, ast: 3.0, pk: 3.0, crdy: 2.0, crdr: 0.0, xg: 11.1, xag: 2.8, team: "Manchester-City" },
+  { name: "Harry Kane", nation: "ENG", pos: "FW", age: 29, mp: 15, starts: 15, min: 1335.0, gls: 12.0, ast: 1.0, pk: 2.0, crdy: 4.0, crdr: 0.0, xg: 9.4, xag: 2.4, team: "Tottenham-Hotspur" },
+  { name: "Kevin De Bruyne", nation: "BEL", pos: "MF", age: 31, mp: 14, starts: 13, min: 1131.0, gls: 3.0, ast: 9.0, pk: 0.0, crdy: 0.0, crdr: 0.0, xg: 2.5, xag: 6.0, team: "Manchester-City" },
+  { name: "Bukayo Saka", nation: "ENG", pos: "FW", age: 21, mp: 14, starts: 14, min: 1171.0, gls: 4.0, ast: 6.0, pk: 1.0, crdy: 3.0, crdr: 0.0, xg: 4.5, xag: 2.9, team: "Arsenal" },
+  { name: "Martin Ødegaard", nation: "NOR", pos: "MF", age: 23, mp: 13, starts: 13, min: 1074.0, gls: 6.0, ast: 2.0, pk: 0.0, crdy: 2.0, crdr: 0.0, xg: 4.1, xag: 2.6, team: "Arsenal" },
+  { name: "Gabriel Jesus", nation: "BRA", pos: "FW", age: 25, mp: 14, starts: 14, min: 1219.0, gls: 5.0, ast: 5.0, pk: 0.0, crdy: 4.0, crdr: 0.0, xg: 7.7, xag: 2.8, team: "Arsenal" },
+  { name: "Mohamed Salah", nation: "EGY", pos: "FW", age: 30, mp: 14, starts: 14, min: 1236.0, gls: 6.0, ast: 3.0, pk: 0.0, crdy: 0.0, crdr: 0.0, xg: 7.0, xag: 2.2, team: "Liverpool" },
+  { name: "James Maddison", nation: "ENG", pos: "MF,FW", age: 26, mp: 13, starts: 13, min: 1098.0, gls: 7.0, ast: 4.0, pk: 0.0, crdy: 5.0, crdr: 0.0, xg: 2.6, xag: 2.9, team: "Leicester-City" },
+  { name: "Martinelli", nation: "BRA", pos: "FW", age: 21, mp: 14, starts: 14, min: 1181.0, gls: 5.0, ast: 2.0, pk: 0.0, crdy: 1.0, crdr: 0.0, xg: 3.0, xag: 3.3, team: "Arsenal" },
+  { name: "Callum Wilson", nation: "ENG", pos: "FW", age: 30, mp: 11, starts: 10, min: 787.0, gls: 6.0, ast: 2.0, pk: 1.0, crdy: 1.0, crdr: 0.0, xg: 6.1, xag: 0.6, team: "Newcastle-United" },
+  { name: "Marcus Rashford", nation: "ENG", pos: "FW", age: 25, mp: 14, starts: 13, min: 1126.0, gls: 4.0, ast: 2.0, pk: 0.0, crdy: 1.0, crdr: 0.0, xg: 4.2, xag: 2.0, team: "Manchester-United" },
+  { name: "Son Heung-min", nation: "KOR", pos: "MF,FW", age: 30, mp: 13, starts: 12, min: 1030.0, gls: 3.0, ast: 2.0, pk: 0.0, crdy: 0.0, crdr: 0.0, xg: 3.5, xag: 2.7, team: "Tottenham-Hotspur" },
+  { name: "William Saliba", nation: "FRA", pos: "DF", age: 21, mp: 14, starts: 14, min: 1245.0, gls: 2.0, ast: 1.0, pk: 0.0, crdy: 4.0, crdr: 0.0, xg: 0.3, xag: 0.9, team: "Arsenal" },
+  { name: "Gabriel Dos Santos", nation: "BRA", pos: "DF", age: 24, mp: 14, starts: 14, min: 1260.0, gls: 2.0, ast: 0.0, pk: 0.0, crdy: 2.0, crdr: 0.0, xg: 2.3, xag: 0.2, team: "Arsenal" },
+  { name: "Granit Xhaka", nation: "SUI", pos: "MF", age: 30, mp: 14, starts: 14, min: 1166.0, gls: 3.0, ast: 3.0, pk: 0.0, crdy: 2.0, crdr: 0.0, xg: 1.5, xag: 1.8, team: "Arsenal" },
+  { name: "Ben White", nation: "ENG", pos: "DF", age: 25, mp: 14, starts: 14, min: 1150.0, gls: 0.0, ast: 2.0, pk: 0.0, crdy: 3.0, crdr: 0.0, xg: 0.3, xag: 1.1, team: "Arsenal" },
+  { name: "Aaron Ramsdale", nation: "ENG", pos: "GK", age: 24, mp: 14, starts: 14, min: 1260.0, gls: 0.0, ast: 0.0, pk: 0.0, crdy: 0.0, crdr: 0.0, xg: 0.0, xag: 0.0, team: "Arsenal" },
+  { name: "Alisson", nation: "BRA", pos: "GK", age: 30, mp: 14, starts: 14, min: 1260.0, gls: 0.0, ast: 1.0, pk: 0.0, crdy: 0.0, crdr: 0.0, xg: 0.0, xag: 0.3, team: "Liverpool" },
+  { name: "Ederson", nation: "BRA", pos: "GK", age: 29, mp: 14, starts: 14, min: 1260.0, gls: 0.0, ast: 1.0, pk: 0.0, crdy: 0.0, crdr: 0.0, xg: 0.0, xag: 0.2, team: "Manchester-City" },
+  { name: "Andrew Robertson", nation: "SCO", pos: "DF", age: 28, mp: 12, starts: 10, min: 861.0, gls: 0.0, ast: 4.0, pk: 0.0, crdy: 0.0, crdr: 0.0, xg: 0.4, xag: 2.4, team: "Liverpool" },
+  { name: "Harrison Reed", nation: "ENG", pos: "MF", age: 27, mp: 14, starts: 14, min: 1175.0, gls: 2.0, ast: 1.0, pk: 0.0, crdy: 5.0, crdr: 0.0, xg: 1.0, xag: 1.6, team: "Fulham" },
+  { name: "Jefferson Lerma", nation: "COL", pos: "MF,DF", age: 28, mp: 15, starts: 15, min: 1350.0, gls: 2.0, ast: 0.0, pk: 0.0, crdy: 3.0, crdr: 0.0, xg: 1.2, xag: 0.3, team: "Bournemouth" },
+  { name: "Brenden Aaronson", nation: "USA", pos: "MF,FW", age: 22, mp: 14, starts: 14, min: 1189.0, gls: 1.0, ast: 2.0, pk: 0.0, crdy: 2.0, crdr: 0.0, xg: 1.9, xag: 2.9, team: "Leeds-United" },
+  { name: "Mason Mount", nation: "ENG", pos: "MF,FW", age: 23, mp: 14, starts: 13, min: 1030.0, gls: 2.0, ast: 2.0, pk: 0.0, crdy: 2.0, crdr: 0.0, xg: 1.5, xag: 1.6, team: "Chelsea" },
+  { name: "Thomas Partey", nation: "GHA", pos: "MF", age: 29, mp: 11, starts: 11, min: 959.0, gls: 2.0, ast: 0.0, pk: 0.0, crdy: 1.0, crdr: 0.0, xg: 1.0, xag: 0.6, team: "Arsenal" }
+];
