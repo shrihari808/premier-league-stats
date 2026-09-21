@@ -3,12 +3,13 @@ package com.pl.premierstats.player;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface PlayerRepository extends JpaRepository<Player, String> {
+public interface PlayerRepository extends JpaRepository<Player, String>, JpaSpecificationExecutor<Player> {
     void deleteByName(String playerName);
     Optional<Player> findByName(String name);
     Page<Player> findByTeam(String team, Pageable pageable);
